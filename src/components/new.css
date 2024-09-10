@@ -1,0 +1,134 @@
+/* Full screen container and background */
+.birthday-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Background image */
+  .background-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+  
+  /* Dark overlay */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Content styles */
+  .content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .birthday-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    animation: bounce 2s infinite;
+  }
+  
+  /* Cake and candles */
+  .cake {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .cake-icon {
+    filter: drop-shadow(2px 4px 6px black);
+  }
+  
+  .candle {
+    position: absolute;
+    bottom: 100%;
+    width: 2px;
+  }
+  
+  .candle-body {
+    width: 100%;
+    height: 8px;
+    background-color: #FFD700;
+    border-radius: 50%;
+  }
+  
+  .candle-flame {
+    width: 2px;
+    height: 2px;
+    background-color: orange;
+    border-radius: 50%;
+    animation: bounce 0.5s infinite;
+  }
+  
+  /* Button */
+  .celebrate-button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff007a, #ff007a, #7700ff);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .celebrate-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Balloons */
+  .balloons {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .balloon {
+    position: absolute;
+    bottom: -80px;
+    width: 50px;
+    height: 60px;
+    animation: float 5s infinite ease-in-out;
+  }
+  
+  .balloon-string {
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    
+}
